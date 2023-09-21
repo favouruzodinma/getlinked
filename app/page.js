@@ -10,27 +10,37 @@ export default function Home() {
           <div className='line'></div>
         </div>
 
-        <div  className='inside'>
+        <div  className='insidehours'>
             <div className='inside1'>
+
               <div className='firstimg'></div>
+
               <div className='textArea'>
                 <p>
                   Participate in getlinked tech hackhathon 2023 stand <br />
                   a chance to win a Big prize
                 </p>
-                <Button name='register'/>
+                <Button name='register'/> 
+                  <div className='hours'>
+                    <pre>00 <small>Hr</small> </pre>
+                    <pre>00 <small>Mn</small> </pre>
+                    <pre>00 <small>Sc</small> </pre>
+                  </div>
               </div>
+
           </div>
           <div className='inside2'>
             
             <div className='hackerthonguy'></div>
           </div>
+
         </div>
 
         <section className='part2'>
-          <div className='lightbulb'>
-
+          <div className='bulbdiv'>
+              <div className='lightbulb'></div>
           </div>
+
           <div className='text2'>
             <h1>
               Introdruction to getlinked <br/>
@@ -106,6 +116,61 @@ export default function Home() {
             <Button name='Read More' />
           </div>
         </section>
+         <section>
+          <div>
+            <h1>
+              Frequently Ask <br />
+               <span>
+                Question
+               </span>
+            </h1>
+            <p>
+              We got answers to the question that you might <br />
+              want to ask about getlinked Hackathon 1.0
+            </p>
+
+            <div>
+
+            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
+              <div className="collapse-title text-xl font-medium">
+                  Focus me to see content
+                </div>
+                <div className="collapse-content"> 
+                  <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+                </div>
+             </div>
+
+              <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
+                 <div className="collapse-title text-xl font-medium">
+                    Focus me to see content 
+                  </div>
+                  <div className="collapse-content"> 
+                    <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+                  </div>
+              </div>
+              <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
+              <div className="collapse-title text-xl font-medium">
+                  Focus me to see content
+                </div>
+                <div className="collapse-content"> 
+                  <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+                </div>
+              </div>
+              <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
+              <div className="collapse-title text-xl font-medium">
+                  Focus me to see content
+                </div>
+                <div className="collapse-content"> 
+                  <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div>
+
+          </div>
+         </section>
     </main>
   )
 }
