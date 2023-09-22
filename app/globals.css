@@ -4,15 +4,16 @@
 
 *{
   background: url('../public/images/Purple-Lens-Flare-PNG.png');
+  @apply max-sm:bg-no-repeat
 }
-.header{
+/* .header{
   @apply flex justify-around items-center w-[100vw] h-[15vh] border-b-[0.5px] border-b-slate-400 text-[18px]
+} */
+.header h1{
+  @apply text-white text-[20px] lg:text-[30px] font-extrabold lg:pl-24 
 }
-.header h2{
-  @apply text-white text-[36px] font-extrabold pl-24 
-}
-.header h2>span{
-  @apply text-[#D434FE]
+.header h1>span{
+  @apply text-[#D434FE] text-[20px] lg:text-[30px]
 }
 nav ul{
   @apply flex justify-around items-center w-[60vw] max-md:hidden
@@ -30,10 +31,10 @@ nav ul{
   @apply lg:flex  w-full pt-[30px] border-b-[1px] 
 }
 .inside1{
-  @apply lg:flex lg:flex-col lg:w-[50%] lg:gap-3  justify-center lg:h-[50%] text-center
+  @apply lg:flex lg:flex-col lg:w-[50%] lg:gap-3  justify-center lg:h-[50%] max-sm:text-center
 }
 .inside2{
-  @apply flex lg:flex-col w-[50%]  items-center justify-center m-auto max-sm:pt-[78px]
+  @apply flex lg:flex-col w-[63%]  items-center justify-center m-auto max-sm:pt-[78px]
 }
 .textArea{
   @apply lg:absolute lg:top-[400px] lg:left-[135px] 
@@ -42,16 +43,16 @@ nav ul{
   @apply pb-8
 }
 .hours{
-  @apply flex flex-row justify-center
+  @apply flex flex-row justify-center lg:-ml-[80px]
 }
 .hours pre{
-  @apply text-[30px]
+  @apply lg:text-[50px] text-[40px] pt-5 
 }
 .hours small{
-  @apply text-[12px] -ml-3
+  @apply text-[15px] -ml-4
 }
 .linediv{
-  @apply w-[100%] max-md:text-center sm:text-[29px] max-md:pt-4 max-md:leading-8 lg:flex  flex-col lg:pl-[50%] 
+  @apply w-[100%] max-md:text-center sm:text-[29px] max-md:pt-4 max-md:leading-8 lg:flex md:pt-[100px] pb-5 flex-col lg:pl-[50%] 
 }
 .line{
   background-repeat: no-repeat;
@@ -63,85 +64,114 @@ nav ul{
   background: url('../public/images/Hackathon-guy.png');
   background-repeat: no-repeat;
   background-size: contain;
-  @apply h-[40vh] w-[250px] lg:h-[90vh] lg:w-[100%] max-sm:scale-150 lg:relative lg:left-[300px];
+  @apply h-[40vh] w-full lg:h-[90vh] lg:w-[100%] max-sm:scale-150 lg:relative lg:left-[400px];
 }
 .linediv h1> i{
   @apply text-[28px] font-bold
 }
-main,header{
+main{
+  @apply max-sm:pt-[70px]
+}
+main,.header{
   background-color: #150E28;
   @apply text-white w-[100vw]
 }
-.part2 , .part3 {
-  @apply lg:flex w-[100vw] h-[90vh] lg:justify-center items-center relative pt-11 border-b-[1px] border
+.part2 {
+  @apply lg:flex w-full h-full sm:justify-center sm:items-center relative pt-11 border-b-[1px]
 }
 .bulbdiv{
-  @apply h-[40vh] w-[62vw] lg:w-[50vw] flex m-auto lg:h-[100vh]
+  @apply h-[42vh] w-[70vw] lg:w-[50vw] flex m-auto lg:h-[100vh]
 }
 .lightbulb{
   background-repeat: no-repeat;
   background-size: cover;
   /* zoom: 1.7; */
   background: url('../public/images/idea-bulb.png');
-  @apply h-[100%] w-[300px] lg:absolute  lg:left-[120px] lg:top-[200px] lg:h-[45vh] lg:w-[22%]  lg:scale-150; 
+  @apply h-[100%] w-[300px] lg:absolute  lg:left-[190px] lg:top-[200px] lg:h-[45vh] lg:w-[19.4%]  lg:scale-150 ; 
+}
+.text2div{
+  @apply max-sm:flex max-sm:justify-center max-sm:items-center max-sm:w-full
 }
 .text2{
-   @apply lg:relative h-[80%] lg:top-[70px] lg:left-[150px] text-center;
+   @apply lg:relative h-[80%] lg:top-[50px] lg:left-[250px] max-sm:text-center max-sm:flex max-sm:flex-col max-sm:w-[80vw] max-sm:items-center max-sm:justify-center;
 }
 .text2 >h1{
-  @apply lg:text-[34px] text-[29px] font-extrabold mb-8
+  @apply lg:text-[34px] text-[20px] font-extrabold mb-8
 }
 .text2 > h1>span{
   @apply text-[#D434FE]
 }
 .text2>p{
-  @apply font-sans  text-[16px] lg:w-[70vw] w-[94vw] 
+  @apply font-sans text-[16px] lg:text-[18px] lg:w-[70vw] 
+}
+.part3{
+  @apply lg:flex w-full lg:h-[95vh] max-h-full sm:justify-center sm:items-center relative pt-11 border-b-[1px] flex max-sm:flex-col-reverse;
 }
 .text3{
-  left: -300px;
-  @apply relative h-[80%]
-  
+  @apply lg:relative h-[80%] lg:left-[-90px] max-sm:text-center
 }
 .text3 >h1{
- @apply text-[38px] font-extrabold mb-8
+ @apply text-[38px] font-extrabold mb-8 
 }
 .text3 > h1>span{
  @apply text-[#D434FE]
 }
 .text3>p{
- @apply font-sans space-y-1 text-[16px]
+ @apply font-sans space-y-1 text-[16px] max-sm:text-center
+}
+.ladyDiv{
+  @apply lg:h-[60vh] lg:w-[22vw] flex items-center justify-center
 }
 .chairlady{
-  right: 70px;
-  bottom: 50px;
-  zoom: 1.5;
+  /* zoom: 1.5; */
   background: url('../public/images/chairlady.png');
-  @apply absolute h-[88%] w-[32%]
+  @apply lg:absolute lg:h-[60vh] lg:w-[21.5vw] lg:right-[200px] lg:top-[45px]  lg:scale-150 max-sm:scale-100 w-[80vw] h-[55vh];
 }
 .part4 {
-  @apply flex w-[100vw] h-[100vh] justify-center mt-32 items-center relative pt-11 border-b-[1px]
+  @apply lg:flex w-[80vw] lg:h-full h-[100vh] justify-center mt-32 items-center lg:relative lg:pt-11 
+}
+.workersDiv{
+  @apply lg:h-full h-[45vh] w-full flex justify-center
 }
 .workers{
-  right: 200px;
-  top: 50px;
-  zoom: 1.7;
   background-size: contain;
   background: url('../public/images/workers.png');
-  @apply w-[40%] h-[75%] relative  mb-[10rem]
+  @apply lg:w-[25%] lg:h-[40%] lg:relative lg:mb-[10rem] lg:scale-150 max-sm:scale-125 w-[100vw] h-[35vh] lg:right-[250px] top-[-1000px] lg:top-[50px] ;
 }
 .text4{
-  right: 50px;
-  @apply mb-[10rem] absolute
+  @apply mb-[10rem] lg:absolute lg:right-[50px] max-sm:text-center max-h-full
 }
 .text4 h1{
-  @apply text-[36px] font-extrabold
+  @apply lg:text-[36px] text-[24px] font-extrabold
 }
 .text4 h1>span{
   @apply text-[#D434FE]
 }
 .text4 > p{
-  @apply my-3 
+  @apply lg:my-3 pb-4 sm:text-[16px]
 }
 .text4 p>span{
   @apply text-[#D434FE]
+}
+.part5{
+  @apply lg:flex lg:w-full lg:py-44 h-[100vh]
+}
+.text5{
+  @apply flex flex-col h-[100vh] w-[80%]  m-auto border 
+}
+.text5 h1{
+  @apply lg:text-[36px] text-[20px] font-extrabold pb-5
+}
+.text5 h1>span{
+  @apply lg:text-[36px] text-[20px] font-extrabold text-[#D434FE]
+}
+.text5 p{
+  @apply pb-5 text-[17px]
+}
+.thinkmanDiv{
+  @apply flex m-auto  pb-[100px] lg:relative border justify-center items-center
+}
+.thinkman{
+  background: url('../public/images/think-man.png');
+  @apply lg:items-center lg:h-[50vh] lg:w-[25vw] h-[90vw] w-[80vw] max-md:w-[70vw] max-md:h-[48vh] md:scale-150 scale-105 lg:absolute md:right-[-100px] lg:right-[200px] top-[-120px]
 }

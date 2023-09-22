@@ -1,6 +1,46 @@
-import Image from 'next/image'
+'use client'
+import { useState } from 'react';
+import AccordionItem from './component/Accordionitem';
 import Button from './component/button'
+// import collapse from './component/collapse';
 export default function Home() {
+
+  const [open, setOpen] = useState(false);
+  const toggle = (index) =>{
+    if(open === index){
+      return setOpen(null)
+    }
+    setOpen(index)
+  }
+  const faqData = [
+    
+    {
+      question: 'What is GetLinked Hackathon 1.0?',
+      answer:
+        'GetLinked Hackathon 1.0 is a tech innovation competition where participants can showcase their coding and problem-solving skills to create innovative solutions for real-world problems.'
+    },
+    {
+      question: 'Who can participate in the hackathon?',
+      answer:
+        'The hackathon is open to students, developers, designers, and anyone passionate about technology. You can participate individually or as a team.'
+    },
+    {
+      question: 'How can I register for the hackathon?',
+      answer:
+        'To register for the hackathon, visit our registration page and follow the instructions. Make sure to provide accurate information.'
+    },
+    {
+      question: 'What are the prizes for the winners?',
+      answer:
+        'We have exciting prizes for the winners, including cash rewards, mentorship opportunities, and more. Check the prizes section on our website for detailed information.'
+    },
+    {
+      question: 'When and where will the hackathon take place?',
+      answer:
+        'The hackathon will take place on [Date] at [Location]. Be sure to check our schedule for the latest updates and event details.'
+    }
+  ];
+
   return (
     <main>
        <div className='linediv'>
@@ -22,9 +62,9 @@ export default function Home() {
                 </p>
                 <Button name='register'/> 
                   <div className='hours'>
-                    <pre>00 <small>Hr</small> </pre>
-                    <pre>00 <small>Mn</small> </pre>
-                    <pre>00 <small>Sc</small> </pre>
+                    <pre>00 <small>H</small> </pre>
+                    <pre>00 <small>M</small> </pre>
+                    <pre>00 <small>S</small> </pre>
                   </div>
               </div>
 
@@ -41,7 +81,8 @@ export default function Home() {
               <div className='lightbulb'></div>
           </div>
 
-          <div className='text2'>
+         <div className='text2div'>
+         <div className='text2'>
             <h1>
               Introdruction to getlinked <br/>
                <span>
@@ -57,6 +98,7 @@ export default function Home() {
               that what we're all about. 
             </p>
           </div>
+         </div>
         </section>
         <section className='part3'>
         <div className='text3'>
@@ -76,13 +118,17 @@ export default function Home() {
           </p>
         </div>
 
-        <div className='chairlady'></div>
+         <div className='ladyDiv'>
+         <div className='chairlady'></div>
+         </div>
         </section>
 
         <section className='part4'>
-          <div className='workers'></div>
-
-          <div className='text4'>
+            <div className='workersDiv'>
+              <div className='workers'></div>
+            </div>
+          <div className='sm:flex sm:justify-center max-sm:w-[100vw] sm:items-center'>
+            <div className='text4'>
             <h1>
               Judging Criteria <br />
               <span>Key attributes</span>
@@ -114,10 +160,46 @@ export default function Home() {
             Knowldegeor algorithm and the societbility of the sultion.
             </p>
             <Button name='Read More' />
+            </div>
           </div>
         </section>
-         <section>
-          <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+         <section className='part5'>
+          <div className='text5'>
             <h1>
               Frequently Ask <br />
                <span>
@@ -129,46 +211,16 @@ export default function Home() {
               want to ask about getlinked Hackathon 1.0
             </p>
 
-            <div>
-
-            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
-              <div className="collapse-title text-xl font-medium">
-                  Focus me to see content
-                </div>
-                <div className="collapse-content"> 
-                  <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-                </div>
-             </div>
-
-              <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
-                 <div className="collapse-title text-xl font-medium">
-                    Focus me to see content 
-                  </div>
-                  <div className="collapse-content"> 
-                    <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-                  </div>
-              </div>
-              <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
-              <div className="collapse-title text-xl font-medium">
-                  Focus me to see content
-                </div>
-                <div className="collapse-content"> 
-                  <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-                </div>
-              </div>
-              <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-white">
-              <div className="collapse-title text-xl font-medium">
-                  Focus me to see content
-                </div>
-                <div className="collapse-content"> 
-                  <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-                </div>
-              </div>
-
-            </div>
+          <div className='collapseitem'>
+            {faqData.map((data, index) => {
+                return <AccordionItem key={index} open={index === open}  question={data.question} answer={data.answer} toggle={()=>toggle(index)} />;
+              })}
           </div>
-          <div>
+            
+          </div>
 
+          <div className='thinkmanDiv'>
+            <div className='thinkman'></div>
           </div>
          </section>
     </main>
